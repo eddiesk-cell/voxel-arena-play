@@ -1,0 +1,26 @@
+{
+  "name": "Voxel Arena",
+  "short_name": "Voxel Arena",
+  "description": "An original 5v5 voxel MOBA for the browser: 52 heroes, six arenas, solo vs AI or online.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone", "minimal-ui"],
+  "orientation": "landscape",
+  "background_color": "#0b0f1a",
+  "theme_color": "#0b0f1a",
+  "categories": ["games", "entertainment"],
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Tutorial", "short_name": "Tutorial", "description": "Learn the basics in a scripted 5 minute match", "url": "./?tutorial=1", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "Practice", "short_name": "Practice", "description": "Target dummies and a DPS meter", "url": "./?practice=1", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] }
+  ]
+}

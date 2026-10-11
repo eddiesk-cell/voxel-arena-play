@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0f1a">
+<meta name="color-scheme" content="dark">
+<title>Install Voxel Arena</title>
+<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<style>
+  :root { --bg:#0b0f1a; --card:#141b2d; --line:#26324d; --text:#e8ecf5; --muted:#9aa6c1; --accent:#4aa8ff; --gold:#ffc94a; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; background:var(--bg); color:var(--text); font:17px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px calc(40px + env(safe-area-inset-bottom)); }
+  header { display:flex; align-items:center; gap:14px; margin-bottom: 18px; }
+  header img { width:64px; height:64px; border-radius:14px; }
+  h1 { margin:0; font-size: 28px; letter-spacing: .02em; }
+  h1 span { color: var(--accent); }
+  .tag { color: var(--muted); margin: 2px 0 0; font-size: 15px; }
+  .play { display:block; text-align:center; background: linear-gradient(180deg,#5cb6ff,#2f86e0); color:#04101f; font-weight:800;
+          font-size: 22px; padding: 18px; border-radius: 14px; text-decoration:none; margin: 8px 0 22px; box-shadow: 0 6px 24px rgba(74,168,255,.25); }
+  section { background: var(--card); border:1px solid var(--line); border-radius: 16px; padding: 18px 18px 14px; margin-bottom: 16px; }
+  h2 { margin: 0 0 10px; font-size: 22px; }
+  ol { margin: 0; padding-left: 22px; }
+  li { margin: 6px 0; }
+  b.k { color: var(--gold); }
+  .btn { display:inline-block; margin: 12px 0 4px; padding: 14px 18px; border-radius: 12px; background:#1f2a44; border:1px solid #3a4a72;
+         color: var(--text); font-weight: 700; text-decoration:none; font-size: 18px; }
+  .note { color: var(--muted); font-size: 14px; margin: 8px 0 0; }
+  .qr { display:flex; gap: 18px; align-items:center; flex-wrap: wrap; }
+  .qr svg { width: 200px; height: 200px; border-radius: 12px; background:#fff; flex: 0 0 auto; }
+  .qr p { margin: 0; flex: 1 1 220px; }
+  code { background:#0e1424; padding: 2px 6px; border-radius: 6px; font-size: 14px; word-break: break-all; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="./icons/icon-192.png" alt="">
+    <div><h1>VOXEL <span>ARENA</span></h1><p class="tag">Play-test build 2 &middot; 5v5 voxel battles vs AI</p></div>
+  </header>
+
+  <a class="play" href="./">Play now</a>
+
+  <section>
+    <h2>Install on iPhone</h2>
+    <ol>
+      <li>Open this page in <b class="k">Safari</b> (not Chrome).</li>
+      <li>Tap <b class="k">Play now</b> above so the game opens.</li>
+      <li>Tap the <b class="k">Share</b> button (the square with the arrow pointing up).</li>
+      <li>Scroll down and tap <b class="k">Add to Home Screen</b>, then <b class="k">Add</b>.</li>
+      <li>Start Voxel Arena from its new icon: it opens full screen. Turn the phone sideways.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Install on Android</h2>
+    <ol>
+      <li>Open this page in <b class="k">Chrome</b> and tap <b class="k">Play now</b>.</li>
+      <li>Tap the <b class="k">&#8942; menu</b> (top right), then <b class="k">Install app</b> (or <b class="k">Add to Home screen</b>).</li>
+      <li>Or tap the <b class="k">Install</b> message the game shows at the bottom.</li>
+    </ol>
+    <p><b>Or get the Android app (APK):</b></p>
+    <a class="btn" id="apk" href="https://github.com/eddiesk-cell/voxel-arena-play/releases/download/playtest-2/VoxelArena-playtest2.apk">Download Android app</a>
+    <p class="note">After the download, open the file and tap Install. If Android asks, allow "Install unknown apps" for your browser once. This is a test build, so Play Protect may ask you to confirm.</p>
+  </section>
+
+  <section>
+    <h2>Open it on another phone</h2>
+    <div class="qr">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" shape-rendering="crispEdges"><path fill="#ffffff" d="M0 0h37v37H0z"/><path stroke="#0b0f1a" d="M2 2.5h7m1 0h2m2 0h1m1 0h1m3 0h1m7 0h7M2 3.5h1m5 0h1m1 0h2m2 0h1m3 0h2m1 0h2m1 0h1m3 0h1m5 0h1M2 4.5h1m1 0h3m1 0h1m1 0h3m4 0h4m1 0h3m3 0h1m1 0h3m1 0h1M2 5.5h1m1 0h3m1 0h1m3 0h2m3 0h1m3 0h1m1 0h1m2 0h1m1 0h1m1 0h3m1 0h1M2 6.5h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h3m1 0h2m1 0h2m4 0h1m1 0h3m1 0h1M2 7.5h1m5 0h1m4 0h1m1 0h2m5 0h5m1 0h1m5 0h1M2 8.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M11 9.5h1m1 0h3m5 0h2m1 0h1m1 0h1M2 10.5h1m2 0h6m6 0h3m1 0h1m4 0h2m2 0h1m1 0h3M6 11.5h2m1 0h3m2 0h1m1 0h2m2 0h3m1 0h2m4 0h4M2 12.5h2m4 0h4m1 0h2m1 0h2m1 0h2m1 0h2m1 0h1m2 0h1m1 0h5M3 13.5h4m2 0h3m2 0h1m1 0h2m1 0h1m2 0h1m2 0h2m1 0h2m2 0h3M3 14.5h1m1 0h1m1 0h2m1 0h4m1 0h2m1 0h3m1 0h1m5 0h1M2 15.5h1m3 0h1m6 0h3m2 0h2m1 0h1m1 0h3m1 0h1m1 0h1M2 16.5h1m1 0h2m2 0h1m1 0h2m1 0h4m1 0h1m1 0h1m3 0h1m3 0h1m1 0h1m1 0h1M2 17.5h1m4 0h1m3 0h2m4 0h1m3 0h1m5 0h1m2 0h3m1 0h1M2 18.5h3m1 0h4m2 0h1m1 0h2m5 0h2m3 0h6M2 19.5h2m7 0h2m1 0h1m2 0h2m2 0h4m3 0h1m1 0h1m1 0h1m1 0h1M5 20.5h1m2 0h2m1 0h2m2 0h4m2 0h6m1 0h2m1 0h2m1 0h1M3 21.5h1m1 0h2m2 0h1m2 0h6m1 0h3m2 0h1m3 0h1m1 0h4M2 22.5h1m2 0h1m2 0h2m1 0h1m2 0h1m1 0h2m4 0h1m1 0h1m1 0h1m2 0h1m1 0h1M2 23.5h2m1 0h1m4 0h4m4 0h1m1 0h1m1 0h5m2 0h4M2 24.5h1m2 0h4m1 0h1m2 0h2m2 0h3m3 0h3m1 0h2m3 0h3M2 25.5h1m1 0h1m1 0h1m3 0h2m2 0h1m1 0h1m1 0h3m4 0h3m1 0h1m2 0h1M2 26.5h2m2 0h1m1 0h2m2 0h1m2 0h1m1 0h2m2 0h2m2 0h7m1 0h2M10 27.5h2m1 0h6m1 0h1m2 0h1m2 0h1m3 0h1m1 0h1M2 28.5h7m1 0h1m1 0h1m2 0h1m1 0h1m2 0h3m2 0h2m1 0h1m1 0h1m1 0h1M2 29.5h1m5 0h1m1 0h3m1 0h1m1 0h1m8 0h2m3 0h4M2 30.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h3m1 0h2m1 0h2m1 0h6m2 0h1M2 31.5h1m1 0h3m1 0h1m1 0h3m1 0h2m6 0h1m1 0h4m1 0h1m3 0h2M2 32.5h1m1 0h3m1 0h1m2 0h1m1 0h4m1 0h3m1 0h1m1 0h1m1 0h2m1 0h6M2 33.5h1m5 0h1m3 0h2m1 0h4m1 0h1m3 0h1m4 0h2m1 0h3M2 34.5h7m1 0h1m3 0h1m1 0h1m2 0h1m5 0h6"/></svg>
+      <p>Point the phone camera at this code to open the game:<br><code>https://eddiesk-cell.github.io/voxel-arena-play/</code></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>In this build</h2>
+    <ol>
+      <li>Play vs AI, Draft Pick vs AI, Tutorial, Practice, Watch a bot match.</li>
+      <li>52 heroes with new voxel models, splash art and loading cards.</li>
+      <li>Pings, quick chat and emotes (the bots answer your pings).</li>
+      <li>Works offline after the first load.</li>
+    </ol>
+    <p class="note">Online play is coming soon.</p>
+  </section>
+</main>
+</body>
+</html>
