@@ -16,9 +16,9 @@
  */
 'use strict';
 
-const VERSION = '0.1.0-434f0f12fd';
+const VERSION = '0.3.0-e72c3c278d';
 /** Files relative to the worker (hashed by Vite, so a cached copy can never be stale). */
-const PRECACHE = ["assets/GTAOPass-zNnV7dE2.js","assets/animation-CjEgprIR.js","assets/gallery-CpFlSIWG.js","assets/gallery-DPHP1JJg.js","assets/gallery-vfx2-CXHmhEaq.js","assets/index-BNWYeXHC.js","assets/index-CfAHZIm2.css","assets/skin-gallery-BmAyiTR2.js","assets/three.core-CR6xwVyd.js","icons/favicon-32.png","index.html","manifest.webmanifest"];
+const PRECACHE = ["assets/GTAOPass-JRfEXPZu.js","assets/animation-DvzoG8vz.js","assets/camera-Dhnp6lLX.js","assets/combat-BxAc_XbD.js","assets/gallery-BvB-S8IA.js","assets/gallery-DmueVoIi.js","assets/gallery-Dqgayhwi.js","assets/gallery-IkvIaTSy.js","assets/gallery-p9jdNHnW.js","assets/gallery-vfx2-Bo2y85Wf.js","assets/heroes-FGySojcq.js","assets/index-D5Jq8ODm.js","assets/index-DfrUrJqM.css","assets/launch-DAlf1ARv.js","assets/library-Ljjxeuc_.js","assets/library-pPPAT8fX.css","assets/skin-gallery-DnEmu7Jy.js","assets/three.core-C14I9C2I.js","icons/favicon-32.png","index.html","manifest.webmanifest"];
 
 const CACHE_PREFIX = 'va-shell-';
 const CACHE = CACHE_PREFIX + VERSION;

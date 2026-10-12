@@ -9,9 +9,10 @@
 <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
 <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
 <style>
-  :root { --bg:#0b0f1a; --card:#141b2d; --line:#26324d; --text:#e8ecf5; --muted:#9aa6c1; --accent:#4aa8ff; --gold:#ffc94a; }
+  :root { --bg:#0b0f1a; --card:#141b2d; --line:#26324d; --text:#e8ecf5; --muted:#9aa6c1; --accent:#4aa8ff; --gold:#ffc94a; --green:#5ee08a; }
   * { box-sizing: border-box; }
-  html, body { margin:0; background:var(--bg); color:var(--text); font:17px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  html, body { margin:0; background:var(--bg); color:var(--text); font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  [lang="lo"] { font-family: "Noto Sans Lao","Noto Sans Lao UI","Lao Sangam MN","Phetsarath OT","Saysettha OT",system-ui,-apple-system,sans-serif; line-height: 1.75; }
   main { max-width: 760px; margin: 0 auto; padding: 24px 16px calc(40px + env(safe-area-inset-bottom)); }
   header { display:flex; align-items:center; gap:14px; margin-bottom: 18px; }
   header img { width:64px; height:64px; border-radius:14px; }
@@ -19,52 +20,196 @@
   h1 span { color: var(--accent); }
   .tag { color: var(--muted); margin: 2px 0 0; font-size: 15px; }
   .play { display:block; text-align:center; background: linear-gradient(180deg,#5cb6ff,#2f86e0); color:#04101f; font-weight:800;
-          font-size: 22px; padding: 18px; border-radius: 14px; text-decoration:none; margin: 8px 0 22px; box-shadow: 0 6px 24px rgba(74,168,255,.25); }
+          font-size: 22px; padding: 18px; border-radius: 14px; text-decoration:none; margin: 8px 0 12px; box-shadow: 0 6px 24px rgba(74,168,255,.25); }
+  .apk { display:block; text-align:center; background:#1f2a44; border:1px solid #3a4a72; color: var(--text); font-weight: 700;
+         text-decoration:none; font-size: 19px; padding: 15px; border-radius: 14px; margin: 0 0 6px; }
+  .apk small { display:block; color: var(--muted); font-weight: 500; font-size: 13px; }
+  .langs { display:flex; gap:10px; margin: 18px 0 14px; }
+  .langs a { flex:1; text-align:center; padding: 11px; border-radius: 12px; background: var(--card); border:1px solid var(--line);
+             color: var(--text); text-decoration:none; font-weight:700; }
+  .guide-title { font-size: 25px; margin: 26px 0 4px; }
+  .guide-title small { display:block; color: var(--muted); font-size: 15px; font-weight: 500; }
   section { background: var(--card); border:1px solid var(--line); border-radius: 16px; padding: 18px 18px 14px; margin-bottom: 16px; }
-  h2 { margin: 0 0 10px; font-size: 22px; }
-  ol { margin: 0; padding-left: 22px; }
+  h2 { margin: 0 0 10px; font-size: 21px; }
+  h3 { margin: 14px 0 6px; font-size: 18px; color: var(--accent); }
+  h3:first-of-type { margin-top: 4px; }
+  ol, ul { margin: 0; padding-left: 22px; }
   li { margin: 6px 0; }
   b.k { color: var(--gold); }
-  .btn { display:inline-block; margin: 12px 0 4px; padding: 14px 18px; border-radius: 12px; background:#1f2a44; border:1px solid #3a4a72;
-         color: var(--text); font-weight: 700; text-decoration:none; font-size: 18px; }
+  .new li::marker { color: var(--green); }
   .note { color: var(--muted); font-size: 14px; margin: 8px 0 0; }
   .qr { display:flex; gap: 18px; align-items:center; flex-wrap: wrap; }
   .qr svg { width: 200px; height: 200px; border-radius: 12px; background:#fff; flex: 0 0 auto; }
   .qr p { margin: 0; flex: 1 1 220px; }
   code { background:#0e1424; padding: 2px 6px; border-radius: 6px; font-size: 14px; word-break: break-all; }
+  footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 18px; }
 </style>
 </head>
 <body>
 <main>
   <header>
     <img src="./icons/icon-192.png" alt="">
-    <div><h1>VOXEL <span>ARENA</span></h1><p class="tag">Play-test build 2 &middot; 5v5 voxel battles vs AI</p></div>
+    <div><h1>VOXEL <span>ARENA</span></h1><p class="tag">Play-test #3 &middot; 5v5 voxel battles vs AI</p></div>
   </header>
 
   <a class="play" href="./">Play now</a>
+  <a class="apk" id="apk" href="https://github.com/eddiesk-cell/voxel-arena-play/releases/download/playtest-3/VoxelArena-playtest3.apk">Download Android app<small>VoxelArena-playtest3.apk &middot; 8 MB &middot; v0.3.0</small></a>
 
-  <section>
-    <h2>Install on iPhone</h2>
-    <ol>
-      <li>Open this page in <b class="k">Safari</b> (not Chrome).</li>
-      <li>Tap <b class="k">Play now</b> above so the game opens.</li>
-      <li>Tap the <b class="k">Share</b> button (the square with the arrow pointing up).</li>
-      <li>Scroll down and tap <b class="k">Add to Home Screen</b>, then <b class="k">Add</b>.</li>
-      <li>Start Voxel Arena from its new icon: it opens full screen. Turn the phone sideways.</li>
-    </ol>
-  </section>
+  <nav class="langs"><a href="#lo" lang="lo">ພາສາລາວ</a><a href="#en">English</a></nav>
 
-  <section>
-    <h2>Install on Android</h2>
-    <ol>
-      <li>Open this page in <b class="k">Chrome</b> and tap <b class="k">Play now</b>.</li>
-      <li>Tap the <b class="k">&#8942; menu</b> (top right), then <b class="k">Install app</b> (or <b class="k">Add to Home screen</b>).</li>
-      <li>Or tap the <b class="k">Install</b> message the game shows at the bottom.</li>
-    </ol>
-    <p><b>Or get the Android app (APK):</b></p>
-    <a class="btn" id="apk" href="https://github.com/eddiesk-cell/voxel-arena-play/releases/download/playtest-2/VoxelArena-playtest2.apk">Download Android app</a>
-    <p class="note">After the download, open the file and tap Install. If Android asks, allow "Install unknown apps" for your browser once. This is a test build, so Play Protect may ask you to confirm.</p>
-  </section>
+  <!-- ============================== LAO ============================== -->
+  <div id="lo" lang="lo">
+    <h2 class="guide-title">ຄູ່ມືຜູ້ທົດສອບ Playtest #3<small>ຂອບໃຈທີ່ມາຊ່ວຍທົດສອບ! ນີ້ແມ່ນເກມ MOBA 5 ຕໍ່ 5 ແບບ Mobile Legends, ຫຼິ້ນກັບບອດ (AI). ເກມຍັງພັດທະນາຢູ່, ຄຳຕິຊົມຂອງທ່ານຈຶ່ງສຳຄັນຫຼາຍ.</small></h2>
+
+    <section>
+      <h2>ມີຫຍັງໃໝ່ໃນ #3</h2>
+      <ul class="new">
+        <li>ຮີໂຣ່ 52 ຕົວ ມີຮູບແຕ້ມໃໝ່ທັງໝົດ.</li>
+        <li>ຮີໂຣ່ 17 ຕົວ ມີ 4 ສະກິວ ຫຼື ປ່ຽນຮ່າງໄດ້. ທຸກຕົວມີຄອມໂບທີ່ມີຊື່ (ເບິ່ງໄດ້ຢູ່ໜ້າເລືອກຮີໂຣ່, ໜ້າໂຫຼດ ແລະ ເມນູຢຸດເກມ &gt; Hero guide).</li>
+        <li>ຮ້ານຄ້າແບບ Mobile Legends: ໂໝດ <b class="k">AUTO</b> (ເປີດໄວ້ແລ້ວ) ຈະຊື້ໄອເທັມໃຫ້ເອງ. ມີໄອເທັມບາງອັນທີ່ກົດໃຊ້ໄດ້.</li>
+        <li>ແຜນທີ່ (ແມັບ) ໃຫຍ່ຂຶ້ນ (165 x 165), ມີເມືອງທີ່ມີກຳແພງອ້ອມ, ແລະ ຫຼິ້ນປ່າ (Jungle) ງ່າຍຂຶ້ນ.</li>
+        <li>ແທ່ນເກີດໃໝ່ (spawn altar) ຂອງແຕ່ລະທີມ ແບບໃໝ່ ໃຫຍ່ ແລະ ສວຍ.</li>
+        <li>ເລືອກເລນກ່ອນເຂົ້າເກມ (Gold, EXP, Mid, Jungle, Roam). ມີລູກສອນນຳທາງໄປເລນຂອງທ່ານ, ແລະ ມີບອດຝ່າຍເຮົາຫຼິ້ນປ່າໃຫ້.</li>
+        <li>ຍິງໄປພ້ອມກັບຍ່າງໄດ້ (ບໍ່ຕ້ອງຢຸດກ່ອນຍິງ).</li>
+        <li>ເລັງສະກິວເຫັນຊັດເຈນ, ແລະ ເຫັນຊັດວ່າກຳລັງຕີໃຜຢູ່.</li>
+        <li>ປຸ່ມສະກິວແບບແຕ້ມໃໝ່.</li>
+        <li>Ping ແລະ ແຊັດດ່ວນ (quick chat). ບອດຈະຕອບ Ping ຂອງທ່ານ.</li>
+        <li>ເບິ່ງເກມຄືນ (Replay): ຫຼັງຈົບເກມກົດ <b class="k">Watch replay</b>, ຫຼື ເຂົ້າ Profile &gt; Replays.</li>
+        <li>ໜ້າເປີດເກມ (splash) ແລະ ໜ້າໂຫຼດແບບໃໝ່.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>ຕິດຕັ້ງ ແລະ ອັບເດດ</h2>
+      <h3>iPhone</h3>
+      <ol>
+        <li>ເປີດໜ້ານີ້ໃນ <b class="k">Safari</b> (ບໍ່ແມ່ນ Chrome) ແລ້ວກົດ <b class="k">Play now</b>.</li>
+        <li>ກົດປຸ່ມ <b class="k">Share</b> (ຮູບສີ່ຫຼ່ຽມມີລູກສອນຊີ້ຂຶ້ນ) &gt; <b class="k">Add to Home Screen</b> &gt; <b class="k">Add</b>.</li>
+        <li>ເປີດເກມຈາກໄອຄອນໃໝ່ ແລ້ວຫັນໂທລະສັບເປັນແນວນອນ.</li>
+      </ol>
+      <p class="note">ຖ້າເຄີຍຕິດຕັ້ງ Playtest #2 ແລ້ວ: ເປີດເກມຈາກໄອຄອນເດີມ ຕອນມີອິນເຕີເນັດ. ເມື່ອເຫັນ <b class="k">New version - tap to reload</b> ໃຫ້ກົດ. ຖ້າບໍ່ເຫັນ: ປິດແອັບ (ປັດຂຶ້ນເພື່ອປິດ), ເປີດໃໝ່, ແລ້ວລໍຖ້າບຶດໜຶ່ງ.</p>
+      <h3>Android</h3>
+      <ol>
+        <li>ກົດ <b class="k">Download Android app</b> ຢູ່ເທິງ &gt; ເປີດໄຟລ໌ &gt; <b class="k">Install</b>. ຖ້າ Android ຖາມ, ໃຫ້ອະນຸຍາດ "Install unknown apps" ສຳລັບ browser ຄັ້ງດຽວ. ນີ້ແມ່ນເວີຊັນທົດສອບ, Play Protect ອາດຈະຖາມໃຫ້ຢືນຢັນ.</li>
+        <li>ຖ້າມີແອັບ Playtest #2 ຢູ່ແລ້ວ: ຕິດຕັ້ງ APK ໃໝ່ທັບໄດ້ເລີຍ, ບໍ່ຕ້ອງລຶບອັນເກົ່າ.</li>
+        <li>ຫຼື ໃຊ້ Chrome: ກົດ <b class="k">Play now</b> &gt; ເມນູ <b class="k">&#8942;</b> &gt; <b class="k">Install app</b> (ຫຼື <b class="k">Add to Home screen</b>). ອັບເດດ: ເມື່ອເຫັນ <b class="k">New version - tap to reload</b> ໃຫ້ກົດ.</li>
+      </ol>
+      <p class="note">ຫຼັງເປີດຄັ້ງທຳອິດ, ຫຼິ້ນກັບບອດໄດ້ເຖິງບໍ່ມີອິນເຕີເນັດ.</p>
+    </section>
+
+    <section>
+      <h2>ສິ່ງທີ່ຢາກໃຫ້ທົດສອບ</h2>
+      <ol>
+        <li><b>ການຄວບຄຸມໃນໂທລະສັບ:</b> ຈອຍສະຕິກ, ປຸ່ມຕີ, ປຸ່ມສະກິວ ກົດງ່າຍບໍ? ນິ້ວບັງຈໍບໍ?</li>
+        <li><b>ຕີໄປພ້ອມຍ່າງ:</b> ກົດປຸ່ມຕີຄ້າງໄວ້ ແລ້ວຍ່າງໄປນຳ. ຍິງໂດນບໍ? ຮູ້ສຶກລື່ນບໍ?</li>
+        <li><b>ຄອມໂບຂອງແຕ່ລະຮີໂຣ່:</b> ລອງຫຼາຍໆຕົວ, ໂດຍສະເພາະຕົວທີ່ມີ 4 ສະກິວ ຫຼື ປ່ຽນຮ່າງໄດ້. ຄອມໂບເຮັດໄດ້ຕາມທີ່ບອກບໍ?</li>
+        <li><b>ຮ້ານຄ້າ ແລະ AUTO:</b> ຕອນເປີດ AUTO, ມັນຊື້ຂອງໃຫ້ຖືກບໍ? ໄອເທັມທີ່ກົດໃຊ້ໄດ້ ໃຊ້ໄດ້ແທ້ບໍ?</li>
+        <li><b>ປ່າ (Jungle):</b> ລອງເລືອກເລນ Jungle. ຕີມອນໃນປ່າງ່າຍບໍ? ຫາທາງງ່າຍບໍ?</li>
+        <li><b>ຂະໜາດແມັບ:</b> ໃຫຍ່ໂພດ, ນ້ອຍໂພດ ຫຼື ພໍດີ? ຍ່າງໄປເລນດົນໂພດບໍ?</li>
+        <li><b>ຄວາມຍາວຂອງເກມ:</b> ເກມໜຶ່ງຄວນໃຊ້ 15-30 ນາທີ. ເກມຂອງທ່ານໃຊ້ເວລາຈັກນາທີ?</li>
+        <li><b>ແລັກ ແລະ ຄວາມຮ້ອນ:</b> ເກມກະຕຸກບໍ? ໂທລະສັບຮ້ອນຫຼາຍບໍ? ແບັດໝົດໄວບໍ?</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>ວິທີລາຍງານ</h2>
+      <p style="margin:0 0 6px">ບອກ <b class="k">Eddie</b> ໂດຍກົງ (ແຊັດ ຫຼື ຂໍ້ຄວາມ) ພ້ອມຂໍ້ມູນນີ້:</p>
+      <ul>
+        <li>ໂທລະສັບລຸ້ນໃດ (ຕົວຢ່າງ: iPhone 13, Samsung A54)</li>
+        <li>ແມັບໃດ</li>
+        <li>ຮີໂຣ່ຕົວໃດ</li>
+        <li>ເກີດຫຍັງຂຶ້ນ (ແລະ ທ່ານຄິດວ່າຄວນຈະເປັນແນວໃດ)</li>
+        <li>ຮູບແຄັບໜ້າຈໍ ຫຼື ວິດີໂອອັດໜ້າຈໍ (ຖ້າມີ ຈະຊ່ວຍໄດ້ຫຼາຍ)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>ຂໍ້ຈຳກັດທີ່ຮູ້ແລ້ວ</h2>
+      <ul>
+        <li>ຫຼິ້ນກັບ AI (ບອດ) ເທົ່ານັ້ນ.</li>
+        <li>ຫຼິ້ນອອນລາຍ (Online) ຍັງບໍ່ມີ, ຈະມາໄວໆນີ້.</li>
+        <li>ຄວາມສົມດຸນ (ຮີໂຣ່ບາງຕົວແຮງ ຫຼື ອ່ອນເກີນໄປ) ຍັງປັບຢູ່.</li>
+        <li>ແອັບ Android ເປັນເວີຊັນທົດສອບ, ຍັງບໍ່ມີໃນ Play Store. iPhone ໃຊ້ "Add to Home Screen".</li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- ============================== ENGLISH ============================== -->
+  <div id="en" lang="en">
+    <h2 class="guide-title">Tester guide - Playtest #3<small>Thanks for helping test! Voxel Arena is a 5v5 MOBA in the style of Mobile Legends, played against bots (AI). It is still in development, so your feedback matters a lot.</small></h2>
+
+    <section>
+      <h2>What's new in #3</h2>
+      <ul class="new">
+        <li>52 heroes, all with new art.</li>
+        <li>17 heroes have 4 skills or switch forms. Every hero has named combos (see hero select, the loading screen and Pause &gt; Hero guide).</li>
+        <li>Mobile Legends-style shop: <b class="k">AUTO</b> (on by default) buys your items for you. Some items have an active you can tap.</li>
+        <li>Bigger maps (165 x 165) with walled towns, and an easier jungle.</li>
+        <li>Epic spawn altars in each team's base.</li>
+        <li>Pick your lane before the match (Gold, EXP, Mid, Jungle, Roam), a guide arrow to your lane, and a bot jungler on your team.</li>
+        <li>Shoot while moving (no need to stop first).</li>
+        <li>Clear skill aiming and a clear marker on who your attacks are hitting.</li>
+        <li>Painted skill buttons.</li>
+        <li>Pings and quick chat. The bots answer your pings.</li>
+        <li>Replays: tap <b class="k">Watch replay</b> after a match, or Profile &gt; Replays.</li>
+        <li>New splash and loading screens.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Install and update</h2>
+      <h3>iPhone</h3>
+      <ol>
+        <li>Open this page in <b class="k">Safari</b> (not Chrome) and tap <b class="k">Play now</b>.</li>
+        <li>Tap <b class="k">Share</b> (the square with the up arrow) &gt; <b class="k">Add to Home Screen</b> &gt; <b class="k">Add</b>.</li>
+        <li>Start the game from the new icon and turn the phone sideways.</li>
+      </ol>
+      <p class="note">Already installed Playtest #2? Open the game from its icon while online. When <b class="k">New version - tap to reload</b> shows, tap it. If it does not show: close the app (swipe it away), open it again and wait a moment.</p>
+      <h3>Android</h3>
+      <ol>
+        <li>Tap <b class="k">Download Android app</b> above &gt; open the file &gt; <b class="k">Install</b>. If Android asks, allow "Install unknown apps" for your browser once. It is a test build, so Play Protect may ask you to confirm.</li>
+        <li>Already have the Playtest #2 app? Install the new APK over it. No need to uninstall.</li>
+        <li>Or with Chrome: tap <b class="k">Play now</b> &gt; <b class="k">&#8942;</b> menu &gt; <b class="k">Install app</b> (or <b class="k">Add to Home screen</b>). To update: when <b class="k">New version - tap to reload</b> shows, tap it.</li>
+      </ol>
+      <p class="note">After the first load, games vs bots work with no internet.</p>
+    </section>
+
+    <section>
+      <h2>What to test</h2>
+      <ol>
+        <li><b>Phone controls:</b> are the joystick, attack and skill buttons easy to hit? Do your fingers cover the action?</li>
+        <li><b>Attacking while moving:</b> hold the attack button and keep walking. Do the shots land? Does it feel smooth?</li>
+        <li><b>Each hero's combos:</b> try many heroes, especially the ones with 4 skills or forms. Do the combos work as described?</li>
+        <li><b>Shop and AUTO:</b> with AUTO on, does it buy sensible items? Do the tap-to-use items work?</li>
+        <li><b>Jungle:</b> pick the Jungle lane. Are the camps easy to clear? Is the route easy to follow?</li>
+        <li><b>Map size:</b> too big, too small, or right? Is the walk to your lane too long?</li>
+        <li><b>Match length:</b> a match should take 15-30 minutes. How long did yours take?</li>
+        <li><b>Lag and heat:</b> does the game stutter? Does the phone get very hot? Does the battery drain fast?</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>How to report</h2>
+      <p style="margin:0 0 6px">Tell <b class="k">Eddie</b> directly (chat or message) with:</p>
+      <ul>
+        <li>Your phone model (for example iPhone 13, Samsung A54)</li>
+        <li>The map</li>
+        <li>The hero</li>
+        <li>What happened (and what you expected)</li>
+        <li>A screenshot or screen recording (helps a lot)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Known limits</h2>
+      <ul>
+        <li>Vs AI (bots) only.</li>
+        <li>Online play is coming soon.</li>
+        <li>Balance is still being tuned (some heroes may be too strong or too weak).</li>
+        <li>The Android app is a test build, not on the Play Store. iPhone uses Add to Home Screen.</li>
+      </ul>
+    </section>
+  </div>
 
   <section>
     <h2>Open it on another phone</h2>
@@ -74,16 +219,7 @@
     </div>
   </section>
 
-  <section>
-    <h2>In this build</h2>
-    <ol>
-      <li>Play vs AI, Draft Pick vs AI, Tutorial, Practice, Watch a bot match.</li>
-      <li>52 heroes with new voxel models, splash art and loading cards.</li>
-      <li>Pings, quick chat and emotes (the bots answer your pings).</li>
-      <li>Works offline after the first load.</li>
-    </ol>
-    <p class="note">Online play is coming soon.</p>
-  </section>
+  <footer>Play-test #3 &middot; build 0.3.0-e72c3c278d</footer>
 </main>
 </body>
 </html>
