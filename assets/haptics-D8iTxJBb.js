@@ -1,0 +1,1 @@
+var e=e=>{try{typeof navigator<`u`&&`vibrate`in navigator&&navigator.maxTouchPoints>0&&navigator.vibrate(e)}catch{}};function t(t){e=t}function n(t){e?.(t)}export{t as n,n as t};
