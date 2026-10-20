@@ -6,4 +6,4 @@ This repository holds only the built web game (static files) for play-testing. N
 - Install on a phone + tester guide (Lao and English): https://eddiesk-cell.github.io/voxel-arena-play/install.html
 - Android app (APK): see the `playtest-3` release.
 
-Current build: play-test 4 (version 0.4.0). It plays vs AI only (also offline after the first load). Online play is coming soon.
+Current build: play-test 5 (version 0.4.1): new themed menus and buttons, hero balance pass. It plays vs AI only (also offline after the first load). Online play is coming soon.
