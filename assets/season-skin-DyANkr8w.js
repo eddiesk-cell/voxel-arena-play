@@ -1,0 +1,1 @@
+import{n as e}from"./skins-C7ypQNHh.js";var t=[{season:1,theme:e}];function n(e){let n=null;for(let r of t)r.season<=e&&(!n||r.season>n.season)&&(n=r);return n}var r={spark:0,ember:0,flare:0,comet:0,nova:1,zenith:3,astral:1/0};export{n,r as t};
